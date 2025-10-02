@@ -4,3 +4,4 @@ theme:
 
 nav:
   - Home: page.md
+  - MkDocs Configuration: mkdocs.md
