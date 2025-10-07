@@ -73,6 +73,21 @@ jobs:
       - run: mkdocs gh-deploy --force
 ```
 
+## Add images
+
+To add images to your documentation, use the following Markdown syntax:
+
+![Alt text](./images/test.jpg)
+
+
+For example, to add an image from the `docs` folder:
+
+```markdown
+![Alt text](./images/test.jpg)
+```
+
+Make sure your images are stored inside the `docs` directory for proper linking.
+
 ---
 
 ## Useful Plugins
