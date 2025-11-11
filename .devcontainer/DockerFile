@@ -1,0 +1,28 @@
+# Use a small but functional base image
+FROM ubuntu:24.04
+
+# Avoid interactive prompts during install
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install essential packages for C++ development
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        build-essential \
+        cmake \
+        gdb \
+        git \
+        clang \
+        python3 \
+        python3-pip \
+        vim \
+        curl \
+        && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /workspace
+
+# Optionally, copy your project (or you can mount it)
+# COPY . /workspace
+
+# Set default shell
+CMD ["/bin/bash"]
